@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>library</OutputType>
@@ -7,15 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="SFML.Graphics" Version="2.5.0" />
     <PackageReference Include="SFML.System" Version="2.5.0" />
     <PackageReference Include="SFML.Window" Version="2.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="fonts\Roboto-Regular.ttf">
+    <EmbeddedResource Include="fonts\Roboto-Regular.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

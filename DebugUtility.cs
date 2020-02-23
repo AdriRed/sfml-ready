@@ -1,19 +1,24 @@
-﻿using SFML.Graphics;
+﻿using System.Reflection;
+using SFML.Graphics;
 using SFML.System;
+using System.Linq;
 using SFML.Window;
 
 namespace SFMLReady
 {
     public static class DebugUtility
     {
-        public const string FontPath = @".\fonts\Roboto-Regular.ttf";
+        public const string FontName = @"Roboto-Regular.ttf";
         public const uint FontSize = 14;
         public static Color FontColor = new Color(10, 10, 10, 200);
         public static Font Font;
 
         public static void LoadContent()
         {
-            Font = new Font(FontPath);
+            var assembly = Assembly.GetExecutingAssembly();
+            var respath = assembly.GetManifestResourceNames().Single(x => x.EndsWith(FontName));
+
+            Font = new Font(assembly.GetManifestResourceStream(respath));
         }
 
         public static void DrawPerformanceData(GameLoop gameLoop)

@@ -7,8 +7,8 @@ namespace SFMLReady
 {
     public abstract class GameLoop
     {
-        public const int TargetFPS = 2000;
-        public const float TimeUntilUpdate = 1f / TargetFPS;
+        private int TargetFPS;
+        private float TimeUntilUpdate;
 
         public RenderWindow Window
         {
@@ -28,8 +28,10 @@ namespace SFMLReady
             protected set;
         }
 
-        protected GameLoop(uint width, uint height, string title, Color clearColor)
+        protected GameLoop(uint width, uint height, string title, Color clearColor, int targetFPS = 60)
         {
+            TargetFPS = targetFPS;
+            TimeUntilUpdate = 1f / TargetFPS;
             ClearColor = clearColor;
             Window = new RenderWindow(new VideoMode(width, height), title);
             GameTime = new GameTime();
@@ -63,7 +65,7 @@ namespace SFMLReady
 
                 if (timeBeforeUpdate >= TimeUntilUpdate)
                 {
-                    GameTime.Update(TimeUntilUpdate, clock.ElapsedTime.AsSeconds());
+                    GameTime.Update(timeBeforeUpdate, clock.ElapsedTime.AsSeconds());
                     Update(GameTime);
 
                     timeBeforeUpdate = 0f;
