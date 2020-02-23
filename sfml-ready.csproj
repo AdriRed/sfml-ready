@@ -12,4 +12,10 @@
     <PackageReference Include="SFML.Window" Version="2.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="fonts\Roboto-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
