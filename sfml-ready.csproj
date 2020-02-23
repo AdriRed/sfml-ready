@@ -1,9 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>library</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>sfml_ready</RootNamespace>
+    <RootNamespace>SFMLReady</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SFML.Graphics" Version="2.5.0" />
+    <PackageReference Include="SFML.System" Version="2.5.0" />
+    <PackageReference Include="SFML.Window" Version="2.5.0" />
+  </ItemGroup>
 
 </Project>
