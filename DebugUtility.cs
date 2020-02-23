@@ -6,7 +6,7 @@ namespace SFMLReady
 {
     public static class DebugUtility
     {
-        public const string FontPath = @".\System\fonts\Roboto-Regular.ttf";
+        public const string FontPath = @".\fonts\Roboto-Regular.ttf";
         public const uint FontSize = 14;
         public static Color FontColor = new Color(10, 10, 10, 200);
         public static Font Font;
