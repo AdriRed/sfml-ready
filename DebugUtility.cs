@@ -4,7 +4,7 @@ using SFML.System;
 using System.Linq;
 using SFML.Window;
 
-namespace SFMLReady
+namespace SFML.Ready
 {
     public static class DebugUtility
     {

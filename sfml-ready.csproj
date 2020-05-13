@@ -4,10 +4,22 @@
     <OutputType>library</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>SFMLReady</RootNamespace>
+    <PackageId>SFML.Ready</PackageId>
+    <Authors>Adrià Rojo</Authors>
+    <Product>SFML.Ready</Product>
+    <Description>Package that contains a 'ready' version of gameloop in sfml</Description>
+    <PackageProjectUrl>https://github.com/AdriRed/sfml-ready</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AdriRed/sfml-ready</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageIcon>WGBmPms.png].png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="fonts\Roboto-Regular.ttf" />
+    <None Include="..\..\..\Downloads\WGBmPms.png].png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

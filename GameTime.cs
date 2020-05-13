@@ -1,4 +1,4 @@
-﻿namespace SFMLReady
+﻿namespace SFML.Ready
 {
     public class GameTime
     {

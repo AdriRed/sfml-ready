@@ -3,7 +3,7 @@ using SFML.Graphics;
 using SFML.Window;
 using SFML.System;
 
-namespace SFMLReady
+namespace SFML.Ready
 {
     public abstract class GameLoop
     {
