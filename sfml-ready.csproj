@@ -12,6 +12,7 @@
     <RepositoryUrl>https://github.com/AdriRed/sfml-ready</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
     <PackageIcon>WGBmPms.png].png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
